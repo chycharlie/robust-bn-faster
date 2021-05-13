@@ -207,6 +207,7 @@ pi_S(pi_S == 0) = 1/N;
 q_S(q_S == 0) = 1/N;
 q_S(q_S == 1) = 1 - 1/N;
 
+% log(d) iterations is often good enough.  You can change it as you see fit.
 n_itr = floor(log(d)) + 1;
 % Maintain a guess q for p and gradually improve q.
 q = q_S;
