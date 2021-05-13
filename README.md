@@ -8,9 +8,9 @@ Our algorithms (`robust` directory)
 ---
 * `main.m`: Evaluate the performance of different algorithms (MLE, [Filtering](https://arxiv.org/abs/1606.07384), and ours) when the graph structure of the ground-truth Bayes net is an empty graph, a random tree, or a random graph.
 * Our algorithm uses robust mean estimations in a black-box manner. We provide two examples of such algorithms.
-  * `robust_mean_pgd.m`: run gradient descent on a natural non-convex formulation (see [High-Dimensional Robust Mean Estimation via Gradient Descent](https://arxiv.org/abs/2005.01378)).
+  * `robust_mean_pgd.m`: run gradient descent on a natural non-convex formulation of the problem (see [High-Dimensional Robust Mean Estimation via Gradient Descent](https://arxiv.org/abs/2005.01378)).
   * `robust_mean_filter.m`: run one-iteration of the Filtering algorithm (see [Robust Estimators in High Dimensions without the Computational Intractability](https://arxiv.org/abs/1604.06443)).
-  * Other robust mean estimation algorithms based on stability of first two moments would work equally well.  For example, [Quantum Entropy Scoring for Fast Robust Mean Estimation and Improved Outlier Detection](https://arxiv.org/abs/1906.11366) and its [implementation](https://github.com/twistedcubic/que-outlier-detection).
+  * Other robust mean estimation algorithms based on stability of first two moments would work as well.  For example, [Quantum Entropy Scoring for Fast Robust Mean Estimation and Improved Outlier Detection](https://arxiv.org/abs/1906.11366) and its [implementation](https://github.com/twistedcubic/que-outlier-detection).
 * We use the following basic functions in `main.m`.
   * `dtv_bn.m`: Estimate the total variation distance (via sampling) between two Bayes nets that have the same structure.
   * `empirical_cond_mean.m`: Compute the empirical conditional probabilities of a known-structure Bayes net.
