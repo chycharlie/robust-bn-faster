@@ -1,4 +1,4 @@
-# Robust Learning of Fixed-Structure Bayesian Networks in Nearly-Linear Time.
+# Robust Learning of Fixed-Structure Bayesian Networks.
 A MATLAB implementation of [Robust Learning of Fixed-Structure Bayesian Networks in Nearly-Linear Time](https://arxiv.org/abs/2105.05555).
 
 Explanation of Files
