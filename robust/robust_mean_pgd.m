@@ -5,6 +5,7 @@
 
 % Input: X (N x d, N d-dimensinoal samples) and eps (fraction of corruption).
 % Output: a hypothesis vector mu (a column vector).
+% The number of iteration nItr is set to 10, which can be changed as you see fit.
 
 function [mu] = robust_mean_pgd(X, eps)
     % N = number of samples, d = dimension.
