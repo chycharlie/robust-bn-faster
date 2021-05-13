@@ -7,7 +7,7 @@ Explanation of Files
 Our algorithms (`robust` directory)
 ---
 * `main.m`: Evaluate the performance of different algorithms (MLE, [Filtering](https://arxiv.org/abs/1606.07384), and ours) when the graph structure of the ground-truth Bayes net is an empty graph, a random tree, or a random graph.
-* Our algorithm uses a robust mean estimation oracle. We provide two examples of such algorithms.
+* Our algorithm uses robust mean estimations in a black-box manner. We provide two examples of such algorithms.
   * `robust_mean_pgd.m`: run gradient descent on a natural non-convex formulation (see [High-Dimensional Robust Mean Estimation via Gradient Descent](https://arxiv.org/abs/2005.01378)).
   * `robust_mean_filter.m`: run one-iteration of the Filtering algorithm (see [Robust Estimators in High Dimensions without the Computational Intractability](https://arxiv.org/abs/1604.06443)).
 * We use the following basic functions in `main.m`.
