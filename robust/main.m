@@ -199,7 +199,7 @@ p_filter = empirical_cond_mean(parent, sorted_pair(1:round((1-eps)*N), 2:end));
 fprintf('\td_TV(p, p_filter) = %f\n', dtv_bn(parent, p, p_filter));
 
 
-%%% STEP 7: Evaluate our algorithm [Cheng, Lin, ICLR 2021].
+%%% STEP 7: Evaluate our algorithm (via reduction to robust mean estimation).
 pi_S = empirical_parental_prob(parent, X);
 q_S = p_MLE;
 % Avoid dividing by zero.
@@ -262,7 +262,7 @@ for itr = 1:n_itr
     hat_fXq = fXq ./ (ones(N, 1) * sqrt(pi_S .* q_S .* (1-q_S))');
 
     % Use any robust mean estimation algorithm that works under stability conditions of first and second moments.
-    % We provide two examples of robust mean algorithms.  Choose one or implement your own.
+    %%% We provide two examples of robust mean algorithms.  Choose one or implement your own.
     nu = robust_mean_filter(hat_fXq, eps);  % one-iteration filtering.
     % nu = robust_mean_pgd(hat_fXq, eps);  % projected gradient descent.
     
